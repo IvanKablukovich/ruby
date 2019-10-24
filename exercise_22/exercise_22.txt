@@ -1,0 +1,34 @@
+\n - new line
+puts - writing string with new line
+print - writing string without new line
+#..some text.. - comment
++ - plus
+- - subtract
+= - equal
+/ - divide
+* - multiply
+% - percent
+< - less then
+> - greater then
+<= -less/equal
+>= -greater/equal
++= - equal x = x + y
+#{something} - write value in string
+"..." - write string with value
+'...' - write string without value
+"%{first} %{second}..." - format string
+%q{...} - alternative of '...'
+\t - tab
+"""...""" - another way to put string
+gets.chomp - gets string from user while program running
+gets.chomp.to_i - convert to int
+ARGV - gets data from user on start program
+open(file) - open file
+file.read - read file
+write('text') - write text to file
+seek(0) - move to begining of file
+close - close file
+open(file, 'w') - open for write
+open(file, 'r') - open for read
+def name(args) - create function with args
+end - end function
