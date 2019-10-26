@@ -1,0 +1,61 @@
+BEGIN - script start
+END - script end
+alias - another name for function (alias x y -- x runs us y)
+and - logical and lower than &&
+begin - start block for exeptions
+break - break out a loop
+case - like if (case x when y when y1 when y2 else .. end)
+class - new class
+def - new function
+defined? - defind already?
+do - ((0..5) do |x| puts x end)
+else/elsif/if - conditional for loop
+end - end of block
+ensure - run this block whether an exception happens or not
+for - start loop (.each better)
+in - part of if loop
+
+module - define a new module????????
+undef - ?????????????????
+
+next - skip next element in .each
+not - logical not (use !)
+or - ;ogical or
+redo - rerun this code ((0..5).each {|i| redo if i > 2})
+rescue - run code if an exeptions happens
+retry - try again
+self - (defined? self == "self")
+super - parent of this class
+then - optionally use with if
+until - reverse of while
+while - loop
+unless - (unless x>2 then puts "x less than 2" else puts "x greater than 2")
+yield - give control user
+
+
++ 	Add 	2 + 4 == 6
+- 	Subtract 	2 - 4 == -2
+* 	Multiply 	2 * 4 == 8
+** 	Power of 	2 ** 4 == 16
+/ 	Divide 	2 / 4.0 == 0.5
+% 	Modulus 	2 % 4 == 2
+> 	Greater than 	4 > 4 == false
+. 	Dot access 	"1".to_i == 1
+:: 	Colon access 	Module::Class
+[] 	List brackets 	[1,2,3,4]
+! 	Not 	!true == false
+< 	Less than 	4 < 4 == false
+> 	Greater than 	4 < 4 == false
+>= 	Greater than equal 	4 >= 4 == true
+<= 	Less than equal 	4 <= 4 == true
+<=> 	Comparison 	4 <=> 4 == 0
+== 	Equal 	4 == 4 == true
+=== 	Equality 	4 === 4 == true
+!= 	Not equal 	4 != 4 == false
+&& 	Logical and (higher precedence) 	true && false == false
+|| 	Logical or (higher precedence) 	true || false == true
+.. 	Range inclusive 	(0..3).to_a == [0, 1, 2, 3]
+... 	Range non-inclusive 	(0...3).to_a == [0, 1, 2]
+@ 	Object scope 	@var ; @@classvar
+@@ 	Class scope 	@var ; @@classvar
+$ 	Global scope
