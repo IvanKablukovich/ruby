@@ -1,12 +1,15 @@
 class MainController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
+    @user = current_user.email
     @tasks = Exercise.all
   end
 
-  def show
-    @task = Exercise.find(params[:id])
-  end
+  #def show
+  #  @task = Exercise.find(params[:id])
+  #end
 
   def create
     @task = Exercise.new(task_params)
