@@ -6,5 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Exercise.create(subject: 'ruby', description: 'First task')
-Exercise.create(subject: 'ruby', description: 'Second task')
+
+#User.delete_all
+#User.create(email: 'admin@gmail.com', name: 'admin', password: 'password', flag: true)
+#Exercise.delete_all
+#Exercise.create(subject: 'ruby', description: 'First task')
+#Exercise.create(subject: 'ruby', description: 'Second task')
