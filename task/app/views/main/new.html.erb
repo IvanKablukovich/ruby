@@ -1,0 +1,15 @@
+<%= form_for :main, url: exercises_path do |f| %>
+  <p>
+    Subject<br>
+    <%= f.text_field :subject %>
+  </p>
+
+  <p>
+    Description<br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
