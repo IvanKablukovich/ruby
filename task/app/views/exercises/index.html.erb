@@ -1,0 +1,20 @@
+<h1>Task List</h1>
+
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Description</th>
+    <th>Assignee</th>
+    <th></th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.subject %></td>
+      <td><%= task.description %></td>
+      <td><%= task.assignee %></td>
+      <td><%= link_to "Open", exercise_path(task) %></td>
+    </tr>
+  <% end %>
+  <h><%= link_to "New Task", new_exercise_path %></h>
+</table>
