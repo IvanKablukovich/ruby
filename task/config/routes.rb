@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
+  get 'tasks/new'
 
-  #get 'user/profile', as: 'user_root'
-  get 'exercises/new'
-  #get 'main/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :exercises do
+  resources :tasks do
     resources :comments
   end
 
-  root 'exercises#index'
+  root 'tasks#index'
 
   devise_for :users
 end

@@ -1,4 +1,4 @@
-<%= form_for :exercise, url: exercises_path do |f| %>
+<%= form_for :task, url: tasks_path(@task), method: :patch do |f| %>
   <p>
     Subject<br>
     <%= f.text_field :subject %>

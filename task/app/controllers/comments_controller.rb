@@ -1,18 +1,25 @@
 class CommentsController < ApplicationController
   def create
-    @task = Exercise.find(params[:exercise_id])
-    @comment = @task.comments.create(comment_params)
-    redirect_to exercise_path(@task)
+    @task = Task.find(params[:task_id])
+    if @task.comments.create(comment_params).valid?
+      # @comment = @task.comments.create(comment_params)
+      flash[:success] = 'Comment Saved!'
+    else
+      flash[:notice] = 'Error!'
+    end
+    redirect_to task_path(@task)
   end
 
-  #def destroy
+  # def destroy
   #  @comment = Comment.find(params[:id])
   #  @comment.destroy
-  #  redirect_to exercise_path
-  #end
-  #<%= link_to "delete", exercise_path(:comment_id), method: :delete %>
+  #  redirect_to task_path
+  # end
+  # <%= link_to "delete", task_path(:comment_id), method: :delete %>
 
-  private def comment_params
+  private
+
+  def comment_params
     params.require(:comment).permit(:field, :username)
   end
 end

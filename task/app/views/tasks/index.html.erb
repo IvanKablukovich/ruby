@@ -13,8 +13,8 @@
       <td><%= task.subject %></td>
       <td><%= task.description %></td>
       <td><%= task.assignee %></td>
-      <td><%= link_to "Open", exercise_path(task) %></td>
+      <td><%= link_to "Open", task_path(task) %></td>
     </tr>
   <% end %>
-  <h><%= link_to "New Task", new_exercise_path %></h>
+  <h><%= link_to "New Task", new_task_path %></h>
 </table>
