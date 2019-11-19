@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'tasks#index'
+  root 'tasks#index', as: 'home' 
 
   devise_for :users
 end

@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
       # @comment = @task.comments.create(comment_params)
       flash[:success] = 'Comment Saved!'
     else
-      flash[:notice] = 'Error!'
+      flash[:notice] = 'Field empty!'
     end
     redirect_to task_path(@task)
   end
