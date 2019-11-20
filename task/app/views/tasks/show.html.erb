@@ -14,6 +14,12 @@
   <%= @task.assignee %>
 </p>
 
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+  <%= link_to "Change", edit_task_path(@task) %>
+</p>
+
 <strong>Comments:</strong>
 <% @task.comments.each do |comment| %>
  <p>

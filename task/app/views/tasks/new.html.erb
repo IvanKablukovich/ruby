@@ -32,6 +32,11 @@
   </p>
 
   <p>
+    Status<br>
+    <%= f.select :status, options_for_select(["To do", "In progress", "In review"]) %>
+  </p>
+
+  <p>
     <%= f.submit({:class => 'btn btn-success'})%>
   </p>
 <% end %>
