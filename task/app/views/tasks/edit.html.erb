@@ -1,0 +1,11 @@
+<%= form_for :task, url: task_path(@task), method: :patch do |f| %>
+  <p>
+    Status<br>
+    <%= f.select :status, options_for_select(["To do", "In progress", "In review"]) %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>

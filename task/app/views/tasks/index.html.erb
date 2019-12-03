@@ -1,0 +1,25 @@
+<strong class="text-right" style="color:red;"><%= render 'flashes' %> </strong>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Task List</h1>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Subject</th>
+    <th>Description</th>
+    <th>Assignee</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.subject %></td>
+      <td><%= task.description %></td>
+      <td><%= task.assignee %></td>
+      <td><%= task.status %></td>
+      <td><%= link_to "Open", task_path(task) %></td>
+    </tr>
+  <% end %>
+</table>

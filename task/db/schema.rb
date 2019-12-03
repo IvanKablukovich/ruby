@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_13_082821) do
+ActiveRecord::Schema.define(version: 2019_11_18_104342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.text "field"
+    t.text "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "exercise_id", null: false
-    t.string "username"
-    t.index ["exercise_id"], name: "index_comments_on_exercise_id"
+    t.bigint "task_id", null: false
+    t.index ["task_id"], name: "index_comments_on_task_id"
   end
 
-  create_table "exercises", force: :cascade do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string "subject"
     t.string "assignee"
     t.string "status"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_11_13_082821) do
     t.string "created_by"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,5 +45,6 @@ ActiveRecord::Schema.define(version: 2019_11_13_082821) do
     t.string "email"
   end
 
-  add_foreign_key "comments", "exercises"
+  add_foreign_key "comments", "tasks"
+  add_foreign_key "tasks", "users"
 end

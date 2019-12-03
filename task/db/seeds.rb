@@ -9,5 +9,7 @@
 
 #User.delete_all
 #User.create(email: 'admin@gmail.com', name: 'admin', password: 'password', flag: true)
-#Exercise.delete_all
+#Comment.delete_all
+#Task.delete_all
 #User.create(email: 'user@gmail.com', name: 'user', password: 'password', flag: false)
+#User.create(email: 'user2@gmail.com', name: 'user2', password: 'password', flag: false)

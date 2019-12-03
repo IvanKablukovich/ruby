@@ -1,3 +1,4 @@
+
 <p>
   <strong>Subject:</strong>
   <%= @task.subject %>
@@ -13,6 +14,12 @@
   <%= @task.assignee %>
 </p>
 
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+  <%= link_to "Change", edit_task_path(@task) %>
+</p>
+
 <strong>Comments:</strong>
 <% @task.comments.each do |comment| %>
  <p>
@@ -24,14 +31,16 @@
 <%= form_for([@task, @task.comments.build]) do |f| %>
   <p>
     User<br>
-    <%= f.text_field :username %>
+    <%= f.text_field(:username, {:class => 'form-control'}) %>
   </p>
   <p>
     Comment<br>
-    <%= f.text_area :field %>
+    <%= f.text_area(:field, {:class => 'form-control'}) %>
   </p>
 
+  <strong style="color:red;"><%= render 'flashes' %> </strong>
+
   <p>
-    <%= f.submit %>
+    <%= f.submit({:class => 'btn btn-success'}) %>
   </p>
 <% end %>
